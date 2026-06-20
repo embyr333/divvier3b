@@ -17,5 +17,4 @@ without making the whole supercollection list first.
 Also keeps track of subcollection representing best-split-so-far as I go,
 so that even if the whole thing is made, it does not have to be traversed again.
 
-In the expectation that it may be more time-efficient on average,
-I intend to make some comparisons of run speed for various inputs with divvier3.
+In the expectation that it may be more time-efficient on average, I compared its performance to divvier3, and it was a little faster on 5 of the 7 input lists tested - see Word file "divvier3 vs 3b".
