@@ -1,5 +1,8 @@
 '''
-divvier3b Snapshot2: Tidied up, restored GUI use.
+divvier3b Snapshot3: Added a pair of optional statements (now commented out)
+to crudely time runs for comparison with divvier3b.
+This was a little faster on 5 of the 7 input lists tested -
+see Word file divvier3 vs 3b. 
 
 'Divvier' series objective: Split a collection of numbers (which may 
 include replicates) in two, as evenly as possible.
@@ -19,12 +22,12 @@ Also keeps track of subcollection representing best-split-so-far as I go,
 so that even if the whole thing is made, it does not have to be traversed again. 
 
 TODO: 
-- Attempt some comparisons of run speed for various inputs with divvier3.
 - (Maybe add a Clear button to GUI.)
-- Make an executable.
+- (Maybe make an executable.)
 '''
 
 import re
+import time 
 
 # If using CLI/IDE
 # def divvy(nums: list[float]) -> str: 
@@ -42,6 +45,9 @@ def divvy():
 
     if len(nums) < 2: 
         return 'Input lists smaller than 2 numbers are not relevant.\n'
+
+    # Optional: Execute if want to time the run (with partner statement near end)
+    # start_time = time.time() 
 
     subcolls: list[list[float]] = [[]]
 
@@ -82,6 +88,9 @@ def divvy():
     'and complement        ' + str(complement) + '\n' 
     '(totalling ' + str(sum_complement)  + ')\n' +
     '(Other combinations may exist.)\n')
+
+    # Optional: Print time taken in milliseconds to terminal (optional)
+    # print((time.time() - start_time) * 1000) 
 
     # If using CLI/IDE
     # return report
