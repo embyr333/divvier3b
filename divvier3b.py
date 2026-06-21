@@ -1,8 +1,5 @@
 '''
-divvier3b Snapshot3: Added a pair of optional statements (now commented out)
-to crudely time runs for comparison with divvier3b.
-This was a little faster on 5 of the 7 input lists tested -
-see Word file divvier3 vs 3b. 
+divvier3b Snapshot4: Just noting that an executable has been added.
 
 'Divvier' series objective: Split a collection of numbers (which may 
 include replicates) in two, as evenly as possible.
@@ -20,10 +17,13 @@ so that I can do the checks for perfect split and exit early if found,
 without making the whole supercollection list first. 
 Also keeps track of subcollection representing best-split-so-far as I go,
 so that even if the whole thing is made, it does not have to be traversed again. 
+Includes a pair of optional statements (now commented out)
+to crudely time runs for comparison with divvier3.
+It was a little faster on 5 of the 7 input lists tested -
+see Word file divvier3 vs 3b.
 
-TODO: 
-- (Maybe add a Clear button to GUI.)
-- (Maybe make an executable.)
+TODO maybe: 
+- (Could add a Clear button to GUI.)
 '''
 
 import re
