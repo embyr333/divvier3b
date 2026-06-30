@@ -17,4 +17,13 @@ without making the whole supercollection list first.
 Also keeps track of subcollection representing best-split-so-far as I go,
 so that even if the whole thing is made, it does not have to be traversed again.
 
-In the expectation that it may be more time-efficient on average, I compared its performance to divvier3, and it was a little faster on 5 of the 7 input lists tested - see Word file "divvier3 vs 3b".
+In the expectation that it may be more time-efficient on average, I compared its performance to divvier3, and it was (at least) ~8-23 times faster than divvier3 for the 6 ‘simpler’ input   
+lists tested and ~13% slower for the 2 ‘more complex’ inputs, 
+though the statistical significance of the latter pair was lower/marginal,
+as detailed in uploaded subfolder "divvier3 vs divvier3bSnapshot5" 
+within uploaded folder "speed comparisons".
+I suspect that the 'more complex' inputs are unlikely to have multiple subcollection 
+pairs with a difference of 0 from each other (or from the half total)  
+and are therefore unlikely to return early after finding an exact split.
+
+Updated executable (for Snapshot5) also uploaded to Releases.
